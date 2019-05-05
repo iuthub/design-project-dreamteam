@@ -1,0 +1,99 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 300ms;/*500*/
+	visibility: hidden;
+	opacity: 0;
+}
+
+.active {
+	z-index: 0 !important;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup {
+	margin: 70px auto;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 5px;
+	width: 70%;
+	position: relative;
+	transition: all 0.1s ease-in-out;/*5000ms*/
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	transition: all 0ms;/*200*/
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #06D85F;
+}
+
+.popup .content {
+	max-height: 30%;
+	overflow: auto;
+}
+
+.btn-1 {
+	margin-right: 15px;
+}
+
+.w3-row h5 {
+	font-size: 18px;
+	font-style: none;
+}
+
+.text-div {
+	padding: 10px;
+}
+
+@media screen and (max-width: 70%) {
+	.popup {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.popup {
+		margin: 150px auto 70px auto;
+		background: #fff;
+		border-radius: 5px;
+		width: 90%;
+		position: relative;
+		transition: all 0.1s /*5s*/ ease-in-out;
+	}
+
+	.inner-div {
+		padding: 0;
+	}
+
+	.text-div {
+		height: 260px !important;
+		padding: 5px;
+		font-size: 10px;
+		line-height: 25px !important;
+	}
+
+	.w3-row h5 {
+		font-size: 12px;
+	}
+
+	.btn-1 {
+		margin-bottom: 8px;
+	}
+}
